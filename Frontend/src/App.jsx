@@ -14,11 +14,12 @@ const App = () => {
     }
 
     try {
-      const res = await fetch("/ai/ask", {
+      const res = await fetch("https://dip-mern-ai-review-4.onrender.com/ai/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: code })
       })
+
       const data = await res.json()
       console.log(data)
       const aiResponse = typeof data === "string"
