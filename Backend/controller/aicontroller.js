@@ -1,6 +1,7 @@
 export const Homepagecontroller = (req, res) => {
   res.send("Welcome to the AI homepage");
 };
+
 import generateAiResponse from "../src/ai.service.js";
 export const AIPromptController = async (req, res) => {
   const prompt = req.body.prompt;
